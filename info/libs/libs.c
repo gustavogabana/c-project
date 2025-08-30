@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
+#include <locale.h>
 
 int main() {
     // math.h
@@ -30,5 +31,10 @@ int main() {
     } else {
         printf("Nome incorreto.\n");
     }
+
+    // locale.h
+    setlocale(LC_ALL, "");
+    printf("Locale.h: Coração\n");
+
     return 0;
 }
