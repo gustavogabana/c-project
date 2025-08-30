@@ -2,6 +2,7 @@
 #include <math.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
 int main() {
     // math.h
@@ -17,5 +18,17 @@ int main() {
     char texto[] = "123";
     int valor = atoi(texto);
     printf("Convertido: %d\n", valor);
+
+    // string.h
+    char nome[] = "Nome";
+    char sobrenome[] = " Sobrenome";
+    strcat(nome, sobrenome);
+    printf("Nome completo: %s\n", nome);
+    printf("Tamanho da string: %d\n", strlen(nome));
+    if (strcmp(nome, "Nome sobrenome") == 0) {
+        printf("Nome correto.\n");
+    } else {
+        printf("Nome incorreto.\n");
+    }
     return 0;
 }
